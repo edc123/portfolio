@@ -36,8 +36,8 @@ const Ocean = () => {
       fontSize = x <= 768 ? 60 : 0.12 * x
       lineHeight = x <= 768 ? 60 : 0.12 * x
     } else if (fontSizeSetting === 'medium') {
-      fontSize = x <= 768 ? 40 : 0.08 * x
-      lineHeight = x <= 768 ? 40 : 0.08 * x
+      fontSize = x <= 768 ? 40 : 0.06 * x
+      lineHeight = x <= 768 ? 40 : 0.06 * x
     } else if (fontSizeSetting === 'small') {
       fontSize = x <= 768 ? 30 : 0.08 * x
       lineHeight = x <= 768 ? 30 : 0.08 * x
@@ -62,12 +62,8 @@ const Ocean = () => {
       style: oceanTextStyle('large'),
     },
     {
-      text: 'Revolutionary work for clients is high quality, high performance work.',
+      text: 'I manage, develop and deliver innovative experiences that serve millions of people around the world.',
       style: oceanTextStyle('medium'),
-    },
-    {
-      text: 'I manage, develop and deliver innovative experiences that serve millions of people around the world, working closely with great design and engineering teams.',
-      style: oceanTextStyle('small'),
     },
   ]
 
@@ -77,7 +73,7 @@ const Ocean = () => {
 
       <Stage
         width={ x }
-        height={ y * (oceanContent.length + 0.5) }
+        height={ y * (oceanContent.length + 0.3) }
         options={ stageOptions }
       >
         { oceanContent.map((content, i) => (
@@ -90,7 +86,7 @@ const Ocean = () => {
               y: 0.5,
             } }
             x={ x / 2 }
-            y={ ((i * y) + y / 2) }
+            y={ ((i * y - 1) + y / 2) }
           />
         ))}
       </Stage>
