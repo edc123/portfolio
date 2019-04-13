@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, {
+  useState,
+  useEffect,
+} from 'react'
 import { debounce } from 'lodash'
 import { Stage } from '@inlet/react-pixi/dist/react-pixi.cjs'
 
@@ -10,7 +13,6 @@ const Ocean = () => {
 
   useEffect(() => {
     const handleResize = () => setX(window.innerWidth * 0.9)
-
     window.addEventListener('resize', debounce(handleResize, 100))
     window.addEventListener('orientationchange', debounce(handleResize, 100))
     return () => {
