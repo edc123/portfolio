@@ -1,3 +1,8 @@
+$blue: #30C1FF;
+$yellow: #ffeab3;
+$white: #ffffff;
+$black: #000000;
+
 html {
   box-sizing: border-box;
 }
@@ -7,13 +12,13 @@ html {
 }
 
 body {
-  background-color: #30C1FF;
+  background-color: $blue;
   font-family: 'Roboto', Helvetica, 'Arial', sans-serif;
   font-size: 26px;
-  color: #fff;
+  color: $white;
 }
 
-h1 {
+.title {
   @media only screen and (max-width: 768px) {
     margin: 3vh;
   }
@@ -21,11 +26,11 @@ h1 {
 
 a {
   text-decoration: underline;
-  color: #000000;
+  color: $black;
 }
 
 .ocean {
-  background-color: #30C1FF;
+  background-color: $blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,10 +64,10 @@ a {
 }
 
 .beach {
-  background-color: #ffeab3;
-  color: #000000;
+  background-color: $yellow;
+  color: $black;
   height: 100%;
-  padding: 300px 5vw 5vw;
+  padding: 300px 5vw 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,27 +85,27 @@ a {
   }
 }
 
-.resume {
+.resume-link {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  margin-bottom: 10vw;
-
-  @media only screen and (max-width: 768px) {
-    font-size: 1rem;
-  }
+  font-weight: 900;
+  margin-bottom: 50px;
 }
 
-.resume__icon {
+.resume-link__icon {
   width: 350px;
   height: 350px;
   z-index: 9999999;
-  margin: 200px 0 0 50px;
+  margin: 200px 0 50px 50px;
 
   @media only screen and (max-width: 768px) {
     width: 200px;
     height: 200px;
   }
+}
+
+.github-link {
+  font-weight: 900;
 }
