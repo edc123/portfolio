@@ -10,8 +10,9 @@ import {
   useApp,
   useTick,
 } from '@inlet/react-pixi/dist/react-pixi.cjs'
+import displacementMap from './displacement_map.png'
 
-const displacementTexture = PIXI.Texture.fromImage('https://res.cloudinary.com/cdn-data/image/upload/v1513024988/awzuINU_qrktxk.jpg')
+const displacementTexture = PIXI.Texture.fromImage(displacementMap)
 displacementTexture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT
 
 const OceanText = ({
@@ -23,9 +24,11 @@ const OceanText = ({
 }) => {
   const displacementSprite = useRef(null)
   const [filters, setFilters] = useState([])
+  const [isDisplacementVisible, setIsDisplacementVisible] = useState(false)
 
   useEffect(() => {
     setFilters([new PIXI.filters.DisplacementFilter(displacementSprite.current)])
+    setIsDisplacementVisible(true)
   })
 
   const pixiApp = useApp()
@@ -33,8 +36,8 @@ const OceanText = ({
   pixiApp.renderer.view.style.touchAction = 'auto'
 
   const moveDisplacement = () => {
-    displacementSprite.current.x -= 1
-    displacementSprite.current.y -= 1
+    displacementSprite.current.x -= 2
+    displacementSprite.current.y -= 2
   }
 
   useTick(() => {
@@ -48,6 +51,7 @@ const OceanText = ({
         texture={ displacementTexture }
         width={ x }
         height={ y }
+        visible={ isDisplacementVisible }
       />
       <Text
         style={ style }

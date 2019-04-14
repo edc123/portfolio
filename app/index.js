@@ -22,8 +22,8 @@ const App = () => {
 
   const updateSwimmer = () => {
     const windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-    const beachTopPos = document.querySelector('.beach').getBoundingClientRect().top
-    const parasolTopPos = document.querySelector('.parasol').getBoundingClientRect().top
+    const beachTopPos = document.querySelector('.beach') ? document.querySelector('.beach').getBoundingClientRect().top : windowHeight
+    const parasolTopPos = document.querySelector('.parasol') ? document.querySelector('.parasol').getBoundingClientRect().top : windowHeight
     const swimmerTopPos = (windowHeight / 2) - (175 / 2)
     const swimmerBottomPos = (windowHeight / 2) + (175 / 2)
 

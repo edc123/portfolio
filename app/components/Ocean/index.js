@@ -62,7 +62,7 @@ const Ocean = () => {
       style: oceanTextStyle('large'),
     },
     {
-      text: 'I manage, develop and deliver innovative experiences that serve millions of people around the world.',
+      text: 'Ed specialises in building design-accurate solutions, no matter how outrageous.',
       style: oceanTextStyle('medium'),
     },
   ]
