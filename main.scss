@@ -13,6 +13,17 @@ body {
   color: #fff;
 }
 
+h1 {
+  @media only screen and (max-width: 768px) {
+    margin: 3vh;
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: #000000;
+}
+
 .ocean {
   background-color: #30C1FF;
   display: flex;
@@ -39,9 +50,57 @@ body {
   }
 }
 
+.swimmer__sprite--up {
+  transform: scaleY(-1);
+}
+
+.swimmer__sprite--hidden {
+  display: none;
+}
+
 .beach {
   background-color: #ffeab3;
   color: #000000;
-  height: 1000px;
-  padding: 5vw;
+  height: 100%;
+  padding: 300px 5vw 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.parasol {
+  width: 300px;
+  height: 300px;
+  z-index: 9999999;
+
+  @media only screen and (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-bottom: 10vw;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.resume__icon {
+  width: 350px;
+  height: 350px;
+  z-index: 9999999;
+  margin: 200px 0 0 50px;
+
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
 }
