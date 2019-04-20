@@ -91,14 +91,14 @@ a {
   justify-content: center;
   flex-direction: column;
   font-weight: 900;
-  margin-bottom: 50px;
+  margin: 200px 0 50px;
 }
 
 .resume-link__icon {
   width: 350px;
   height: 350px;
   z-index: 9999999;
-  margin: 200px 0 50px 50px;
+  margin: 0 0 30px 30px;
 
   @media only screen and (max-width: 768px) {
     width: 200px;
@@ -108,4 +108,5 @@ a {
 
 .github-link {
   font-weight: 900;
+  text-align: center;
 }
