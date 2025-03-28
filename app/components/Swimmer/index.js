@@ -17,6 +17,8 @@ const Swimmer = ({
         cx('swimmer__sprite', {
           'swimmer__sprite--up': swimDirection === 'up',
           'swimmer__sprite--hidden': swimmerType === 'hide',
+          'swimmer__sprite--water': swimmerType === 'water',
+          'swimmer__sprite--sand': swimmerType === 'sand',
         })
       }
     />

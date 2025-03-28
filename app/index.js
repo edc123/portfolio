@@ -47,6 +47,10 @@ const App = () => {
       setSwimDirection('up')
     }
 
+    if (nextScrollPos === 0) {
+      setSwimDirection('down')
+    }
+
     currentScrollPos = nextScrollPos
   }
 

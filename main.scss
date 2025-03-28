@@ -57,6 +57,14 @@ a {
   }
 }
 
+.swimmer__sprite--water {
+  margin-top: -18px;
+}
+
+.swimmer__sprite--sand {
+  transform: translateY(-18px);
+}
+
 .swimmer__sprite--up {
   transform: scaleY(-1);
 }
